@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sNa-3s-JpM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StopWatch-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="StopWatch" id="BYZ-38-t0r" customClass="StopWatchViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTI-Yu-TVB">
+                                <rect key="frame" x="30" y="104" width="260" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39c-Ur-zDE">
+                                <rect key="frame" x="30" y="204" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="DM5-0E-Fhh"/>
+                                    <constraint firstAttribute="width" constant="70" id="hWJ-yT-gWK"/>
+                                </constraints>
+                                <state key="normal" title="Lap">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coT-ed-gv4"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ftt-Y1-1Yd">
+                                <rect key="frame" x="0.0" y="289" width="320" height="230"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQr-3t-eG6">
+                                <rect key="frame" x="220" y="204" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6VA-5M-tic"/>
+                                    <constraint firstAttribute="width" constant="70" id="Cgf-Tt-yrt"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ied-ML-M2I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="39c-Ur-zDE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="2C6-2O-W4g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rQr-3t-eG6" secondAttribute="trailing" constant="30" id="5Aj-gZ-Y73"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rTI-Yu-TVB" secondAttribute="trailing" constant="30" id="F1E-kq-f5X"/>
+                            <constraint firstItem="rTI-Yu-TVB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="KZ0-Dk-6DB"/>
+                            <constraint firstItem="ftt-Y1-1Yd" firstAttribute="top" secondItem="rQr-3t-eG6" secondAttribute="bottom" constant="15" id="Kry-sX-1hp"/>
+                            <constraint firstItem="rTI-Yu-TVB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="N5E-GM-U34"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ftt-Y1-1Yd" secondAttribute="bottom" id="QT1-Ta-cku"/>
+                            <constraint firstItem="ftt-Y1-1Yd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="V8C-uF-crx"/>
+                            <constraint firstItem="rQr-3t-eG6" firstAttribute="top" secondItem="rTI-Yu-TVB" secondAttribute="bottom" constant="40" id="mwJ-bX-opO"/>
+                            <constraint firstItem="ftt-Y1-1Yd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tCA-OD-LLb"/>
+                            <constraint firstItem="39c-Ur-zDE" firstAttribute="top" secondItem="rTI-Yu-TVB" secondAttribute="bottom" constant="40" id="veK-hc-076"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ftt-Y1-1Yd" secondAttribute="trailing" id="wuJ-c0-YFm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="StopWatch" id="HyX-xN-g5L"/>
+                    <connections>
+                        <outlet property="elapsedTableView" destination="ftt-Y1-1Yd" id="IJ8-oF-aoE"/>
+                        <outlet property="lapButton" destination="39c-Ur-zDE" id="UgS-d0-o8h"/>
+                        <outlet property="startButton" destination="rQr-3t-eG6" id="mRZ-Xw-Ghs"/>
+                        <outlet property="timeLabel" destination="rTI-Yu-TVB" id="gWc-Rd-Ucw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="-893"/>
+        </scene>
+        <!--StopWatchNavigation-->
+        <scene sceneID="RaV-xj-3wt">
+            <objects>
+                <navigationController title="StopWatchNavigation" automaticallyAdjustsScrollViewInsets="NO" id="yVm-yj-Rbs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="icon" id="2mf-we-wQw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dMk-gi-um0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6wv-ra-o1x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiG-Oh-7Rb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="-860"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2Ng-XK-aak">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sNa-3s-JpM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wNe-97-SQK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PUr-3o-OpN" kind="relationship" relationship="viewControllers" id="C2h-sV-AbM"/>
+                        <segue destination="yVm-yj-Rbs" kind="relationship" relationship="viewControllers" id="j4v-lH-aaL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jji-05-hgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647" y="-892"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="woN-Bz-nNK">
+            <objects>
+                <viewController id="PUr-3o-OpN" customClass="WelcomeScreenViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y6k-0q-pbL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to StopWatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jT-5m-v0R">
+                                <rect key="frame" x="71" y="261" width="179" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7jT-5m-v0R" firstAttribute="centerX" secondItem="2CV-b8-SpR" secondAttribute="centerX" id="hLZ-2e-Rq5"/>
+                            <constraint firstItem="7jT-5m-v0R" firstAttribute="centerY" secondItem="2CV-b8-SpR" secondAttribute="centerY" id="hex-pm-Tdq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2CV-b8-SpR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Welcome" id="pof-mL-i1x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNB-Ln-gUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="-196"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="60" height="60"/>
+    </resources>
+</document>
